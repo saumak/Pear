@@ -1,15 +1,24 @@
 package com.pervasive.pear.pear;
 
 
+import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
 
 import android.os.Bundle;
 
+import android.util.Log;
 import android.view.View;
 
 import android.widget.AutoCompleteTextView;
 
+import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Toast;
+
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.Task;
+import com.google.firebase.auth.AuthResult;
+import com.google.firebase.auth.FirebaseAuth;
 
 
 /**
@@ -36,18 +45,53 @@ public class LoginActivity extends AppCompatActivity{
     // UI references.
     private AutoCompleteTextView mEmailView;
     private EditText mPasswordView;
-    private View mProgressView;
-    private View mLoginFormView;
-
+    private Button mButton;
+    private FirebaseAuth mAuth;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
         // Set up the login form.
         mEmailView = (AutoCompleteTextView) findViewById(R.id.email);
-
+        mButton = (Button)findViewById(R.id.email_sign_in_button);
         mPasswordView = (EditText) findViewById(R.id.password);
+        mAuth = FirebaseAuth.getInstance();
+        mButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                String email = mEmailView.getText().toString();
+                String password = mPasswordView.getText().toString();
+                signIN(email,password);
+
+            }
+        });
+        // Initialize Firebase Auth
 
 
+
+
+        }
+
+        private void signIN(String email, String password){
+
+            mAuth.signInWithEmailAndPassword(email, password)
+                    .addOnCompleteListener(LoginActivity.this, new OnCompleteListener<AuthResult>() {
+                        @Override
+                        public void onComplete(@NonNull Task<AuthResult> task) {
+                            Toast.makeText(LoginActivity.this,"and here", Toast.LENGTH_LONG).show();
+                            Log.d("something", "onComplete: ");
+                            if (task.isSuccessful()) {
+                                // Sign in success, update UI with the signed-in user's information
+                                Toast.makeText(LoginActivity.this,"sucess", Toast.LENGTH_LONG).show();
+                            } else {
+                                // If sign in fails, display a message to the user.
+                                Toast.makeText(LoginActivity.this,"Fail", Toast.LENGTH_LONG).show();
+                            }
+
+                            // ...
+                        }
+
+
+                    });
         }
     }
