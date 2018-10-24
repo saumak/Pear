@@ -1,6 +1,7 @@
 package com.pervasive.pear.pear;
 
 
+import android.content.Intent;
 import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
 
@@ -16,9 +17,14 @@ import android.widget.EditText;
 import android.widget.Toast;
 
 import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
+
+
+import static android.provider.AlarmClock.EXTRA_MESSAGE;
 
 
 /**
@@ -44,6 +50,7 @@ public class LoginActivity extends AppCompatActivity{
 
     // UI references.
     private AutoCompleteTextView mEmailView;
+
     private EditText mPasswordView;
     private Button mButton;
     private FirebaseAuth mAuth;
@@ -61,6 +68,8 @@ public class LoginActivity extends AppCompatActivity{
             public void onClick(View v) {
                 String email = mEmailView.getText().toString();
                 String password = mPasswordView.getText().toString();
+                //replace this code to register
+
                 signIN(email,password);
 
             }
@@ -82,13 +91,19 @@ public class LoginActivity extends AppCompatActivity{
                             Log.d("something", "onComplete: ");
                             if (task.isSuccessful()) {
                                 // Sign in success, update UI with the signed-in user's information
-                                Toast.makeText(LoginActivity.this,"sucess", Toast.LENGTH_LONG).show();
+                                //Toast.makeText(LoginActivity.this,"sucess", Toast.LENGTH_LONG).show();
+                                //FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
+                                //Toast.makeText(LoginActivity.this,user.getDisplayName(), Toast.LENGTH_LONG).show();
+                                Intent intent = new Intent(LoginActivity.this, EditProfile.class);
+
+
+                                startActivity(intent);
                             } else {
                                 // If sign in fails, display a message to the user.
                                 Toast.makeText(LoginActivity.this,"Fail", Toast.LENGTH_LONG).show();
                             }
 
-                            // ...
+
                         }
 
 
