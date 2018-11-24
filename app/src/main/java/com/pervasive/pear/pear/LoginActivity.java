@@ -71,7 +71,6 @@ public class LoginActivity extends AppCompatActivity{
                 String email = mEmailView.getText().toString();
                 String password = mPasswordView.getText().toString();
                 //replace this code to register
-
                 signIN(email,password);
 
             }
@@ -96,19 +95,16 @@ public class LoginActivity extends AppCompatActivity{
                     .addOnCompleteListener(LoginActivity.this, new OnCompleteListener<AuthResult>() {
                         @Override
                         public void onComplete(@NonNull Task<AuthResult> task) {
-                            Toast.makeText(LoginActivity.this,"and here", Toast.LENGTH_LONG).show();
-                            Log.d("something", "onComplete: ");
+                            Toast.makeText(LoginActivity.this,"and here again!", Toast.LENGTH_LONG).show();
+
                             if (task.isSuccessful()) {
-                                // Sign in success, update UI with the signed-in user's information
-                                //Toast.makeText(LoginActivity.this,"sucess", Toast.LENGTH_LONG).show();
-                                //FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
-                                //Toast.makeText(LoginActivity.this,user.getDisplayName(), Toast.LENGTH_LONG).show();
-                                Intent intent = new Intent(LoginActivity.this, EditProfile.class);
+
+                                Intent intent = new Intent(LoginActivity.this, DashBoard.class);
 
 
                                 startActivity(intent);
                             } else {
-                                // If sign in fails, display a message to the user.
+
                                 Toast.makeText(LoginActivity.this,"Fail", Toast.LENGTH_LONG).show();
                             }
 

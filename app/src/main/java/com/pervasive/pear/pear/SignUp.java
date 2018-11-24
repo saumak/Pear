@@ -98,7 +98,7 @@ public class SignUp extends AppCompatActivity {
             uploadTask.addOnFailureListener(new OnFailureListener() {
                 @Override
                 public void onFailure(@NonNull Exception exception) {
-                    // Handle unsuccessful uploads
+
                 }
             }).addOnSuccessListener(new OnSuccessListener<UploadTask.TaskSnapshot>() {
                 @Override
@@ -129,9 +129,11 @@ public class SignUp extends AppCompatActivity {
                             myRef.child("Users").child(user.getUid()).child("location").setValue(strLocation);
                             myRef.child("Users").child(user.getUid()).child("email").setValue(email);
                             myRef.child("Users").child(user.getUid()).child("university").setValue(univ);
-                            myRef.child("Users").child(user.getUid()).child("pic").setValue(profile_pic.toString());
-                            Toast.makeText(SignUp.this, user.getUid(),
-                                    Toast.LENGTH_SHORT).show();
+                            myRef.child("Users").child(user.getUid()).child("pic").setValue(profile_pic.getResult().toString());
+                            Intent intent = new Intent(SignUp.this, LoginActivity.class);
+
+
+                            startActivity(intent);
                         } else {
                             // If sign in fails, display a message to the user.
 

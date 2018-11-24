@@ -6,6 +6,7 @@
 
 
     <ImageView
+        android:id="@+id/img"
         android:layout_width="match_parent"
         android:layout_height="294dp"
         app:srcCompat="@android:drawable/btn_star" />
