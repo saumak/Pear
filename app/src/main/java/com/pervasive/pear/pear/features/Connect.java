@@ -1,5 +1,6 @@
 package com.pervasive.pear.pear.features;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.CardView;
@@ -7,6 +8,8 @@ import android.text.Editable;
 import android.text.TextWatcher;
 import android.util.Log;
 import android.view.Menu;
+import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.EditText;
 import android.widget.ListView;
@@ -18,11 +21,13 @@ import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
+import com.pervasive.pear.pear.DashBoard;
 import com.pervasive.pear.pear.EditProfile;
 import com.pervasive.pear.pear.LoginActivity;
 import com.pervasive.pear.pear.R;
 import com.pervasive.pear.pear.User;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -30,7 +35,7 @@ import java.util.List;
  * Created by shubh on 11/23/2018.
  */
 
-public class Connect extends AppCompatActivity {
+public class Connect extends AppCompatActivity implements AdapterView.OnItemClickListener {
 
     private static final String TAG = "UserList" ;
     private DatabaseReference userlistReference;
@@ -57,6 +62,7 @@ public class Connect extends AppCompatActivity {
         ValueEventListener eventListener = new ValueEventListener() {
             @Override
             public void onDataChange(DataSnapshot dataSnapshot) {
+
                 for (DataSnapshot ds : dataSnapshot.getChildren()) {
 
                     String name = ds.child("name").getValue(String.class);
@@ -66,6 +72,7 @@ public class Connect extends AppCompatActivity {
                     String email = ds.child("email").getValue(String.class);
                     String university = ds.child("university").getValue(String.class);
                     User user = new User(branch,email,location,name, pic,university);
+
                     userList.add(user);
 
 
@@ -84,10 +91,21 @@ public class Connect extends AppCompatActivity {
 
         mAdapter = new UserAdapter(this,userList);
         userListView.setAdapter(mAdapter);
-    }
+        userListView.setOnItemClickListener(this);
+
+       }
 
 
+    @Override
+    public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+
+
+        Intent intent = new Intent(Connect.this, Profile.class);
+        intent.putExtra("User", (Serializable)userList.get(position));
+        startActivity(intent);
+
     }
+}
 
 
 

@@ -24,7 +24,7 @@ import java.util.List;
  * Created by shubh on 11/26/2018.
  */
 
-public class UserAdapter extends ArrayAdapter<User> implements AdapterView.OnItemClickListener{
+public class UserAdapter extends ArrayAdapter<User>{
     private Context mContext;
     private List<User> userList = new ArrayList<>();
     public UserAdapter(@NonNull Context context,@NonNull ArrayList<User> list) {
@@ -59,8 +59,5 @@ public class UserAdapter extends ArrayAdapter<User> implements AdapterView.OnIte
 
 
 
-    @Override
-    public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-        Toast.makeText(parent.getContext(),"were now?",Toast.LENGTH_LONG).show();
-    }
+
 }

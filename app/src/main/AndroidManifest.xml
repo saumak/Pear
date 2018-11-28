@@ -37,6 +37,10 @@
             android:label="@string/app_name">
         </activity>
         <activity android:name=".features.Connect" />
+        <activity
+            android:name=".features.Profile"
+            android:label="@string/app_name">
+        </activity>
     </application>
 
 </manifest>

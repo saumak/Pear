@@ -1,10 +1,12 @@
 package com.pervasive.pear.pear;
 
+import java.io.Serializable;
+
 /**
  * Created by shubh on 11/26/2018.
  */
 
-public class User {
+public class User implements Serializable{
    private  String branch;
    private String email;
    private String location;
