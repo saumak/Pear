@@ -9,6 +9,7 @@ import android.widget.Button;
 import android.widget.Toast;
 
 import com.pervasive.pear.pear.features.Connect;
+import com.pervasive.pear.pear.features.Groups;
 
 /**
  * Created by shubh on 11/12/2018.
@@ -17,12 +18,15 @@ import com.pervasive.pear.pear.features.Connect;
 public class DashBoard extends AppCompatActivity  implements View.OnClickListener {
 
     private CardView connect;
+    private CardView groups;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.dashboard);
         connect = findViewById(R.id.connect);
         connect.setOnClickListener(this);
+        groups = findViewById(R.id.groups);
+        groups.setOnClickListener(this);
     }
 
     @Override
@@ -31,11 +35,16 @@ public class DashBoard extends AppCompatActivity  implements View.OnClickListene
         switch (v.getId()) {
 
             case R.id.connect:
-                Toast.makeText(DashBoard.this,"now what?!", Toast.LENGTH_LONG).show();
+
                 Intent intent = new Intent(DashBoard.this, Connect.class);
                 startActivity(intent);
                 break;
 
+            case R.id.groups:
+
+                Intent intent1 = new Intent(DashBoard.this, Groups.class);
+                startActivity(intent1);
+                break;
 
 
             default:

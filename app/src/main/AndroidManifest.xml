@@ -41,6 +41,14 @@
             android:name=".features.Profile"
             android:label="@string/app_name">
         </activity>
+        <activity
+            android:name=".features.Groups"
+            android:label="@string/app_name">
+        </activity>
+        <activity
+            android:name=".features.GroupActivity"
+            android:label="Pear">
+        </activity>
     </application>
 
 </manifest>

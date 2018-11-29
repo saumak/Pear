@@ -53,7 +53,7 @@ public class LoginActivity extends AppCompatActivity{
 
     private EditText mPasswordView;
     private Button mButton;
-    private FirebaseAuth mAuth;
+    public static FirebaseAuth mAuth;
     private Button mSignup;
     public static String userEmail;
     @Override
