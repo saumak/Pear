@@ -56,9 +56,13 @@ public class LoginActivity extends AppCompatActivity {
 
     private EditText mPasswordView;
     private Button mButton;
-    private FirebaseAuth mAuth;
+    public static FirebaseAuth mAuth;
     private Button mSignup;
+
     private ProgressBar prog;
+
+    public static String userEmail;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
 
@@ -100,7 +104,7 @@ public class LoginActivity extends AppCompatActivity {
         }
 
         private void signIN(String email, String password){
-
+            userEmail=email;
             mAuth.signInWithEmailAndPassword(email, password)
                     .addOnCompleteListener(LoginActivity.this, new OnCompleteListener<AuthResult>() {
                         @Override

@@ -12,6 +12,8 @@
         android:layout_height="200dp"
         card_view:cardCornerRadius="4dp"
 
+        android:clickable="true"
+
         >
 
         <ImageView
@@ -21,9 +23,11 @@
             android:layout_alignLeft="@+id/tv_appname"
             android:layout_alignParentTop="true"
             android:layout_alignStart="@+id/tv_appname"
+
             android:clickable="true"
             card_view:srcCompat="@drawable/handshakaaaa"
             android:text="@string/Connect"/>
+
 
 
         <TextView
@@ -38,4 +42,113 @@
             android:textAppearance="@android:style/TextAppearance.Material.Medium" />
     </android.support.v7.widget.CardView>
 
+    <android.support.v7.widget.CardView
+        android:id="@+id/groups"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/connect"
+        android:layout_gravity="center"
+        android:clickable="true"
+        card_view:cardCornerRadius="4dp">
+
+        <ImageView
+            android:id="@+id/groups_icon"
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:layout_alignLeft="@+id/tv_appname"
+            android:layout_alignParentTop="true"
+            android:layout_alignStart="@+id/tv_appname"
+            android:layout_marginTop="10dp"
+            card_view:srcCompat="@drawable/groupsimage" />
+
+
+        <TextView
+            android:id="@+id/groups_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/img_appicon"
+            android:layout_centerHorizontal="true"
+            android:layout_marginLeft="60dp"
+            android:layout_marginTop="160dp"
+            android:text="Groups"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textColor="@android:color/black" />
+    </android.support.v7.widget.CardView>
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/Explore"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:layout_alignParentEnd="true"
+        android:layout_below="@+id/connect"
+
+        android:layout_gravity="center"
+
+        android:clickable="true"
+        card_view:cardCornerRadius="4dp">
+
+        <ImageView
+            android:id="@+id/img_explore"
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:layout_alignLeft="@+id/tv_appname"
+            android:layout_alignParentTop="true"
+            android:layout_alignStart="@+id/tv_appname"
+
+            android:layout_marginTop="10dp"
+            android:clickable="true"
+            android:text="@string/Connect"
+            card_view:srcCompat="@drawable/explore" />
+
+
+        <TextView
+            android:id="@+id/explore_explore"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/img_appicon"
+            android:layout_centerHorizontal="true"
+            android:layout_marginLeft="60dp"
+            android:layout_marginTop="160dp"
+            android:text="Explore"
+            android:textAppearance="@android:style/TextAppearance.Material.Medium" />
+    </android.support.v7.widget.CardView>
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/Event"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentTop="true"
+
+        android:layout_gravity="center"
+
+        android:clickable="true"
+        android:visibility="visible"
+        card_view:cardCornerRadius="4dp">
+
+        <ImageView
+            android:id="@+id/img_event"
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:layout_alignLeft="@+id/tv_appname"
+            android:layout_alignParentTop="true"
+            android:layout_alignStart="@+id/tv_appname"
+
+            android:clickable="true"
+            android:text="@string/Connect"
+            card_view:srcCompat="@drawable/citylights" />
+
+
+        <TextView
+            android:id="@+id/event_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/img_appicon"
+            android:layout_centerHorizontal="true"
+            android:layout_marginLeft="60dp"
+            android:layout_marginTop="160dp"
+            android:text="Events"
+            android:textAppearance="@android:style/TextAppearance.Material.Medium" />
+    </android.support.v7.widget.CardView>
 </RelativeLayout>

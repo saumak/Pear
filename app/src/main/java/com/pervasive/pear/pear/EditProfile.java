@@ -42,9 +42,10 @@ public class EditProfile extends AppCompatActivity {
     private TextView location;
     private TextView email;
     private ImageView img;
-    private FirebaseAuth mAuth;
 
-        @Override
+    public static FirebaseAuth mAuth;
+
+
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.edit_profile);
@@ -74,7 +75,7 @@ public class EditProfile extends AppCompatActivity {
                 pathReference.getDownloadUrl().addOnSuccessListener(new OnSuccessListener<Uri>() {
                     @Override
                     public void onSuccess(Uri uri) {
-                        // Got the download URL for 'users/me/profile.png'
+                        // Got the download URL for 'users/me/Profile.png'
                         Picasso.get().load(uri.toString()).into(img);
                     }
                 }).addOnFailureListener(new OnFailureListener() {
