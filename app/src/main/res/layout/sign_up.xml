@@ -1,100 +1,187 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    package="com.wrapp.floatlabelededittext"
     android:orientation="vertical" android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="@drawable/gradient">
 
     <TextView
+        android:id="@+id/title"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Email" />
+        android:gravity="center_horizontal"
+        android:text="Sign Up!"
+        android:textAppearance="@style/TextAppearance.AppCompat.Title"
+        android:textColorLink="@color/common_google_signin_btn_text_dark_focused"
+        android:textSize="36sp"
+        android:textStyle="bold" />
 
-    <EditText
-        android:id="@+id/reg_email"
+    <com.wrapp.floatlabelededittext.FloatLabeledEditText
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:ems="10"
-        android:inputType="textPersonName" />
+        android:paddingLeft="60dp"
+        android:paddingRight="60dp"
+        android:text="Email"
+        android:textColor="@color/colorPrimaryDark">
 
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Password" />
 
-    <EditText
-        android:id="@+id/reg_password"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:ems="10"
-        android:inputType="textPassword" />
+        <EditText
+            android:id="@+id/reg_email"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="Email"
+            android:inputType="textPersonName"
+            />
 
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Confirm Password" />
+    </com.wrapp.floatlabelededittext.FloatLabeledEditText>
 
-    <EditText
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:ems="10"
-        android:inputType="textPassword" />
+    <com.wrapp.floatlabelededittext.FloatLabeledEditText
 
-    <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Name" />
+        android:paddingLeft="60dp"
+        android:paddingRight="60dp"
+        android:text="Password"
+        android:textColor="@color/colorPrimaryDark">
 
-    <EditText
-        android:id="@+id/reg_name"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:ems="10"
-        android:inputType="textPersonName" />
+        <EditText
+            android:id="@+id/reg_password"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="Password"
+            android:inputType="textPassword" />
+    </com.wrapp.floatlabelededittext.FloatLabeledEditText>
 
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="University" />
 
-    <EditText
-        android:id="@+id/reg_university"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:ems="10"
-        android:inputType="textPersonName" />
+    <com.wrapp.floatlabelededittext.FloatLabeledEditText
 
-    <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Location" />
+        android:paddingLeft="60dp"
+        android:paddingRight="60dp"
+        android:text="Confirm Password"
+        android:textColor="@color/colorPrimaryDark">
 
-    <EditText
-        android:id="@+id/reg_location"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:ems="10"
-        android:inputType="textPersonName" />
+        <EditText
+            android:id="@+id/confirm_password"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="Confirm Password"
+            android:inputType="textPassword" />
+    </com.wrapp.floatlabelededittext.FloatLabeledEditText>
 
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Branch" />
 
-    <EditText
-        android:id="@+id/reg_branch"
+    <com.wrapp.floatlabelededittext.FloatLabeledEditText
+
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:ems="10"
-        android:inputType="textPersonName" />
+        android:paddingLeft="60dp"
+        android:paddingRight="60dp"
+        android:text="Name"
+        android:textColor="@color/colorPrimaryDark">
+
+        <EditText
+            android:id="@+id/reg_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="Name"
+            android:inputType="textPersonName" />
+    </com.wrapp.floatlabelededittext.FloatLabeledEditText>
+
+
+    <com.wrapp.floatlabelededittext.FloatLabeledEditText
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="60dp"
+        android:paddingRight="60dp"
+        android:text="University"
+        android:textColor="@color/colorPrimaryDark">
+
+        <EditText
+            android:id="@+id/reg_university"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="University"
+            android:inputType="textPersonName" />
+    </com.wrapp.floatlabelededittext.FloatLabeledEditText>
+
+
+    <com.wrapp.floatlabelededittext.FloatLabeledEditText
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="60dp"
+        android:paddingRight="60dp"
+        android:text="Location"
+        android:textColor="@color/colorPrimaryDark">
+
+        <EditText
+            android:id="@+id/reg_location"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="Location"
+            android:inputType="textPersonName" />
+    </com.wrapp.floatlabelededittext.FloatLabeledEditText>
+
+
+    <com.wrapp.floatlabelededittext.FloatLabeledEditText
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="60dp"
+        android:paddingRight="60dp"
+        android:text="Branch"
+        android:textColor="@color/colorPrimaryDark"
+        >
+
+        <EditText
+            android:id="@+id/reg_branch"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="Branch"
+            android:inputType="textPersonName" />
+    </com.wrapp.floatlabelededittext.FloatLabeledEditText>
+
 
     <Button
         android:id="@+id/upload_pic"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Upload Picture" />
+        android:layout_marginLeft="60dp"
+        android:layout_marginRight="60dp"
+        android:layout_marginTop="8dp"
+        android:background="@color/colorPrimary"
+        android:text="Upload Picture"
+        android:textColor="@android:color/black"
+        android:textStyle="bold" />
 
     <Button
         android:id="@+id/sign_up"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Sign Up" />
+        android:layout_marginLeft="60dp"
+        android:layout_marginRight="60dp"
+        android:layout_marginTop="8dp"
+        android:background="@color/colorPrimary"
+        android:text="Sign Up"
+        android:textColor="@android:color/black" />
+
+    <ProgressBar
+        android:id="@+id/login_progress"
+        style="?android:attr/progressBarStyleLarge"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:layout_marginLeft="180dp"
+        android:visibility="gone" />
+
 </LinearLayout>

@@ -28,6 +28,8 @@ import com.google.firebase.storage.UploadTask;
 
 import java.io.ByteArrayOutputStream;
 
+import android.widget.ProgressBar;
+
 /**
  * Created by shubh on 10/24/2018.
  */
@@ -43,12 +45,14 @@ public class SignUp extends AppCompatActivity {
     private Button mUpload;
     private Task<Uri> profile_pic;
     private FirebaseAuth mAuth;
+    private ProgressBar pgsBar;
     static final int REQUEST_IMAGE_CAPTURE = 1;
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.sign_up);
+        pgsBar =(ProgressBar)findViewById(R.id.login_progress);
         name = (EditText)findViewById(R.id.reg_name);
-        name = (EditText)findViewById(R.id.reg_name);
+       // name = (EditText)findViewById(R.id.reg_name);
         branch = (EditText)findViewById(R.id.reg_branch);
         university = (EditText)findViewById(R.id.reg_university);
         location = (EditText)findViewById(R.id.reg_location);
@@ -68,6 +72,11 @@ public class SignUp extends AppCompatActivity {
                 final String strUniv = university.getText().toString();
                 final String strLocation = location.getText().toString();
                 signUp(strEmail,strPass,strBranch,strName,strUniv,strLocation);
+                pgsBar.setVisibility(v.VISIBLE);
+
+
+
+
             }
         });
         mUpload.setOnClickListener(new View.OnClickListener() {

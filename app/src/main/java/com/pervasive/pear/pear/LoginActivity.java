@@ -14,6 +14,7 @@ import android.widget.AutoCompleteTextView;
 
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ProgressBar;
 import android.widget.Toast;
 
 import com.google.android.gms.tasks.OnCompleteListener;
@@ -25,13 +26,15 @@ import com.google.firebase.auth.FirebaseUser;
 
 
 import static android.provider.AlarmClock.EXTRA_MESSAGE;
+import android.os.Bundle;
+import android.support.v4.app.FragmentActivity;
+import android.support.v4.app.FragmentTransaction;
 
 
 /**
  * A login screen that offers login via email/password.
  */
-public class LoginActivity extends AppCompatActivity{
-
+public class LoginActivity extends AppCompatActivity {
     /**
      * Id to identity READ_CONTACTS permission request.
      */
@@ -55,11 +58,14 @@ public class LoginActivity extends AppCompatActivity{
     private Button mButton;
     private FirebaseAuth mAuth;
     private Button mSignup;
+    private ProgressBar prog;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
         // Set up the login form.
+        prog = (ProgressBar)findViewById(R.id.login_prog);
         mEmailView = (AutoCompleteTextView) findViewById(R.id.email);
         mButton = (Button)findViewById(R.id.email_sign_in_button);
         mPasswordView = (EditText) findViewById(R.id.password);
@@ -72,6 +78,9 @@ public class LoginActivity extends AppCompatActivity{
                 String password = mPasswordView.getText().toString();
                 //replace this code to register
                 signIN(email,password);
+                prog.setVisibility(v.VISIBLE);
+
+
 
             }
         });
@@ -82,6 +91,7 @@ public class LoginActivity extends AppCompatActivity{
 
                 Intent intent = new Intent(LoginActivity.this, SignUp.class);
                 startActivity(intent);
+
             }
         });
 
