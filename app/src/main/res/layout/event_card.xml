@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:descendantFocusability="blocksDescendants"
+    android:layout_height="match_parent" >
+
+
+    <TextView
+        android:id="@+id/event_tittle"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignWithParentIfMissing="true"
+        android:gravity="center_vertical"
+        android:text="Title"
+        />
+
+    <TextView
+        android:id="@+id/event_date"
+        android:layout_width="fill_parent"
+        android:layout_height="26dip"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/event_tittle"
+        android:ellipsize="marquee"
+        android:singleLine="true"
+        android:text="Second line" />
+
+    <TextView
+        android:id="@+id/event_desc"
+        android:layout_width="fill_parent"
+        android:layout_height="26dip"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/event_date"
+        android:ellipsize="marquee"
+        android:singleLine="true"
+        android:text="Second line" />
+
+    <TextView
+        android:id="@+id/event_location"
+        android:layout_width="fill_parent"
+        android:layout_height="26dip"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/event_desc"
+        android:ellipsize="marquee"
+        android:singleLine="true"
+        android:text="Second line" />
+</RelativeLayout>

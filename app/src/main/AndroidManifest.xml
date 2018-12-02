@@ -50,6 +50,11 @@
             android:name=".features.GroupActivity"
             android:label="Pear">
         </activity>
+        <activity
+            android:name=".features.Events"
+            android:label="Pear">
+        </activity>
+
     </application>
 
 </manifest>

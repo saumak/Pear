@@ -9,6 +9,7 @@ import android.widget.Button;
 import android.widget.Toast;
 
 import com.pervasive.pear.pear.features.Connect;
+import com.pervasive.pear.pear.features.Events;
 import com.pervasive.pear.pear.features.Groups;
 
 /**
@@ -19,6 +20,7 @@ public class DashBoard extends AppCompatActivity  implements View.OnClickListene
 
     private CardView connect;
     private CardView groups;
+    private CardView events;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -27,6 +29,8 @@ public class DashBoard extends AppCompatActivity  implements View.OnClickListene
         connect.setOnClickListener(this);
         groups = findViewById(R.id.groups);
         groups.setOnClickListener(this);
+        events = findViewById(R.id.Event);
+        events.setOnClickListener(this);
     }
 
     @Override
@@ -45,7 +49,11 @@ public class DashBoard extends AppCompatActivity  implements View.OnClickListene
                 Intent intent1 = new Intent(DashBoard.this, Groups.class);
                 startActivity(intent1);
                 break;
+            case R.id.Event:
 
+                Intent intent2 = new Intent(DashBoard.this, Events.class);
+                startActivity(intent2);
+                break;
 
             default:
                 break;
