@@ -12,9 +12,6 @@ import com.pervasive.pear.pear.features.Connect;
 import com.pervasive.pear.pear.features.Events;
 import com.pervasive.pear.pear.features.Groups;
 
-/**
- * Created by shubh on 11/12/2018.
- */
 
 public class DashBoard extends AppCompatActivity  implements View.OnClickListener {
 
