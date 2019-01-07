@@ -30,10 +30,6 @@ import com.google.firebase.storage.FirebaseStorage;
 import com.google.firebase.storage.StorageReference;
 import com.squareup.picasso.Picasso;
 
-/**
- * Created by shubh on 10/23/2018.
- */
-
 public class EditProfile extends AppCompatActivity {
 
     private TextView name;
