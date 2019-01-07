@@ -24,10 +24,6 @@ import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 
-/**
- * Created by shubh on 11/28/2018.
- */
-
 public class Groups  extends AppCompatActivity implements AdapterView.OnItemClickListener {
 
 
