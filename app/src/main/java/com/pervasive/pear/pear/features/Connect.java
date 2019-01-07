@@ -31,9 +31,6 @@ import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 
-/**
- * Created by shubh on 11/23/2018.
- */
 
 public class Connect extends AppCompatActivity implements AdapterView.OnItemClickListener {
 
