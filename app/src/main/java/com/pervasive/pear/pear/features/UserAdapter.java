@@ -20,10 +20,6 @@ import com.pervasive.pear.pear.User;
 import java.util.ArrayList;
 import java.util.List;
 
-/**
- * Created by shubh on 11/26/2018.
- */
-
 public class UserAdapter extends ArrayAdapter<User>{
     private Context mContext;
     private List<User> userList = new ArrayList<>();
