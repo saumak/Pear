@@ -15,10 +15,6 @@ import com.pervasive.pear.pear.R;
 import java.util.ArrayList;
 import java.util.List;
 
-/**
- * Created by shubh on 12/2/2018.
- */
-
 public class EventAdapter extends ArrayAdapter<Event> {
 
 private Context mContext;
