@@ -3,10 +3,6 @@ package com.pervasive.pear.pear;
 import java.io.Serializable;
 import java.util.ArrayList;
 
-/**
- * Created by shubh on 11/28/2018.
- */
-
 public class Group implements Serializable{
 
     String tittle;
