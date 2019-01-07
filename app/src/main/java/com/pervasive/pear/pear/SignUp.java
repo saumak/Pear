@@ -31,7 +31,7 @@ import java.io.ByteArrayOutputStream;
 import android.widget.ProgressBar;
 
 /**
- * Created by shubh on 10/24/2018.
+ * Created by shruthi on 10/24/2018.
  */
 
 public class SignUp extends AppCompatActivity {
