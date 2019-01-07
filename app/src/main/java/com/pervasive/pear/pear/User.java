@@ -3,7 +3,7 @@ package com.pervasive.pear.pear;
 import java.io.Serializable;
 
 /**
- * Created by shubh on 11/26/2018.
+ * Created by shruthi on 11/26/2018.
  */
 
 public class User implements Serializable{
