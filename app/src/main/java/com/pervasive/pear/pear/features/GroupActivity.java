@@ -31,10 +31,6 @@ import com.pervasive.pear.pear.R;
 import com.pervasive.pear.pear.User;
 import com.squareup.picasso.Picasso;
 
-/**
- * Created by shubh on 11/28/2018.
- */
-
 public class GroupActivity extends AppCompatActivity {
      ImageView img;
      TextView tittle;
