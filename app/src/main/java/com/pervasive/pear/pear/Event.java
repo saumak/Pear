@@ -1,9 +1,5 @@
 package com.pervasive.pear.pear;
 
-/**
- * Created by shubh on 12/2/2018.
- */
-
 public class Event {
 
     private String Date;
