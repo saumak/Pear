@@ -20,9 +20,6 @@ import com.pervasive.pear.pear.R;
 import java.io.Serializable;
 import java.util.ArrayList;
 
-/**
- * Created by shubh on 12/2/2018.
- */
 
 public class Events extends AppCompatActivity {
 
