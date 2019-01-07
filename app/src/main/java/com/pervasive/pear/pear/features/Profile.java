@@ -11,10 +11,6 @@ import android.widget.Toast;
 import com.pervasive.pear.pear.R;
 import com.pervasive.pear.pear.User;
 
-/**
- * Created by shubh on 11/27/2018.
- */
-
 public class Profile extends AppCompatActivity {
     private TextView name;
     private TextView branch;
